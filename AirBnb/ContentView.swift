@@ -2,23 +2,43 @@
 //  ContentView.swift
 //  AirBnb
 //
-//  Created by Sagar Kulkarni on 20/02/25.
+//  Created by Sagar Kulkarni on 26/02/25.
 //
 
 import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
+        FormDemo()
     }
 }
 
 #Preview {
     ContentView()
 }
+
+// components
+/*
+ NavigationBar
+ TextField
+ Sections
+ Buttons
+ Dividers
+ Pickers
+ Links
+*/
+
+// social button
+
+// styles
+// label style
+// button style
+
+// data
+// icon
+// title
+
+// states
+// default
+// active
+// disabled
