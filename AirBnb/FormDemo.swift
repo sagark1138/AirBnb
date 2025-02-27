@@ -125,24 +125,24 @@ struct FormDemo: View {
             }
             .navigationTitle("Form")
             .safeAreaInset(edge: .bottom, alignment: .center, spacing: 20) {
-                Button {
-                    activeTextfield = nil
-                } label: {
-                    Text("Continue".uppercased())
-                        .font(.headline)
-                        .frame(maxWidth: .infinity)
-                }
-                .buttonStyle(.borderedProminent)
-                .controlSize(.large)
-                .padding(.horizontal)
-                .padding(.top)
-                .background(
-                    .thinMaterial
-                )
-                .mask {
-                    Rectangle()
-                        .fill(.linearGradient(colors: [Color.black, Color.black.opacity(0.4), Color.clear], startPoint: .init(x: 0.5, y: 0.1), endPoint: .init(x: 0.5, y: 0.0)))
-                        .ignoresSafeArea()
+                if activeTextfield == nil {
+                    Button {
+                        activeTextfield = nil
+                    } label: {
+                        Text("Continue".uppercased())
+                            .font(.headline)
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .controlSize(.large)
+                    .padding(.horizontal)
+                    .padding(.top)
+                    .background(.thinMaterial)
+                    .mask {
+                        Rectangle()
+                            .fill(.linearGradient(colors: [Color.black, Color.black.opacity(0.4), Color.clear], startPoint: .init(x: 0.5, y: 0.1), endPoint: .init(x: 0.5, y: 0.0)))
+                            .ignoresSafeArea()
+                    }
                 }
             }
         }
